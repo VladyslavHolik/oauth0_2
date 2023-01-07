@@ -1,18 +1,18 @@
 'use strict'
 
 const request = require("request")
-const secrets = require("./secrets.json")
+const secrets = require("./my_applicaton_secrets.json")
 const token = require("./token.json")
 
-const options = { method: 'GET',
+const options = {
+    method: 'GET',
     url: `https://${secrets.domain}/api/v2/users`,
-    headers: { 'Authorization': `Bearer ${token.token}` }
+    headers: {'Authorization': `Bearer ${token.token}`}
 }
 
 request(options, function (error, response, body) {
     if (error) throw new Error(error)
 
-    console.log(body)
     const users = JSON.parse(body)
 
     for (let user of users) {

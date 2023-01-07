@@ -2,7 +2,7 @@
 
 const request = require("request")
 const fs = require('fs');
-const secrets = require("./secrets.json")
+const secrets = require("./my_applicaton_secrets.json")
 
 const options = {
     method: 'POST',

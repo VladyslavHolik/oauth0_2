@@ -2,7 +2,7 @@
 
 const request = require("request")
 
-const secrets = require("./secrets.json")
+const secrets = require("./my_applicaton_secrets.json")
 const token = require("./token.json")
 
 const options = { method: 'POST',
@@ -13,8 +13,8 @@ const options = { method: 'POST',
     },
     body:
         {
-            email: 'john4_test_email@xyz.com',
-            name: 'John4 [test]',
+            email: 'vladyslav_holik@xyz.com',
+            name: 'Vladyslav Holik',
             connection: 'Username-Password-Authentication',
             password: 'john1234!!pass'
         },
